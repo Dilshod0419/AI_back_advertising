@@ -40,7 +40,7 @@ def stream_ad_text(request):
 
     try:
         response_stream = client.models.generate_content_stream(
-            model="gemini-3.5-flash",
+            model="gemini-2.5-flash",
             contents=prompt
         )
 
