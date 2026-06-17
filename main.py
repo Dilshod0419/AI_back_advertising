@@ -17,9 +17,13 @@ app = FastAPI(
     description="Sun'iy intellekt yordamida reklama matnlari va bannerlari yaratish"
 )
 
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],  # Aniq frontend manzili yozilishi shart!
+    allow_origins=[
+        "http://localhost:3000",
+        "https://advertising-ai.vercel.app",
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
